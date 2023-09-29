@@ -1,0 +1,28 @@
+{{> head }}
+    
+        <main class="main">
+        <h1 class="main__title">Actualizar clientes</h1>
+
+        <!-- Formulario -->
+        <form class="form" autocomplete="off" action="/editando-cliente" method="post">
+            
+            <fieldset class="form__fieldset">
+                <input class="form__input" type="text" name="nombre" placeholder="Nombre" autofocus value="{{ cliente.nombre }}">
+                <input class="form__input" type="text" name="apellido" placeholder="Apellido" value="{{ cliente.apellido }}">
+            </fieldset>
+
+            <fieldset class="form__fieldset">
+                <input class="form__input" type="text" name="cedula" placeholder="Cédula" value="{{ cliente.cedula }}">
+                <input class="form__input" type="number" name="edad" placeholder="Edad" value="{{ cliente.edad }}">
+            </fieldset>
+            
+            <fieldset class="form__fieldset">
+               <textarea class="form__textarea" name="direccion">{{ cliente.direccion }}</textarea>
+            </fieldset>
+
+           <button class="form__btn" type="submit" name="id" value="{{cliente.id_cliente}}">Editar</button>
+        </form>
+    </main>
+
+
+{{> foot }}

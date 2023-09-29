@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;300;600;900&display=swap');
+
+:root{
+    --color1: #ffffff;
+    --color2: #000000;
+    --color3: #f5f5f5;
+
+    --color4: #db514d;
+    --color5: #2b90d9;
+    --color6: #004e66;
+    --color7: #e97f02;
+    --color8: #3b8686;
+    --color9: #6a60a9;
+    --color10:#CB3631;
+    --color11:#535e66;
+    --color12:#343e46; 
+    --color13:#bb2929;
+    --color14:#0075FF;
+    --color15:#ffa41c;
+    --color16:#333333;
+
+    --fuente1: 'Urbanist', sans-serif;
+}
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+    font-family:var(--fuente1);
+    font-weight: 300;
+}
+body{
+    width: 100%;
+    height:100vh;
+    background-color: var(--color3);
+    --letter-spaing: 1.125px;
+}
+.main{
+    width: 90%;
+    max-width: 62.5rem;
+    margin: 3.125rem auto;
+}
+
+/* Header */
+.header{
+    width: 100%;
+    height: 5rem;
+    background-color: var(--color16);
+    padding: 2rem 1rem;
+}
+.header__nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header__anchor{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: var(--color1);
+    letter-spacing: var(--letter-spaing);
+}
+
+/* MAIN */
+.btn{
+    padding: .75rem 1rem;
+    background-color: var(--color14);
+    border: none;
+    border-radius: .25rem;
+}
+.btn__anchor{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: var(--color1);
+}
+/* Table */
+.table-section{
+    margin-top: 2rem;
+    overflow-x: scroll;
+}
+.table{
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+.table__theading{
+    background-color: rgba(5, 15, 32, 0.678);
+    padding: .75rem;
+    font-size: 1rem;
+    font-family: var(--fuente1); 
+    color: var(--color1);
+    text-align: center;
+}
+.table__tdata{
+    padding: .5rem;
+    text-align: center;
+}
+.table__thead-row{border-bottom: 1px solid rgba(97, 97, 97, 0.431)}
+.table__tbody-row:nth-child(even){
+    background-color: #1a5b753b;
+}
+.table__data--btn{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.table__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: .25rem;
+    padding: .25rem .5rem;
+    flex-flow: column nowrap;
+}
+.table__btn--delete{background-color: var(--color10);}
+.table__btn--edit{background-color: var(--color5);}
+
+/* Crear clientes */
+.form{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3rem 3rem 6rem 3rem ;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.form__fieldset{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    border: none;
+    gap: 1rem;
+}
+.form__input, 
+.form__textarea{
+    flex: 1 1 50%;
+    font-family: var(--fuente1);
+    font-weight: 500;
+    font-size: 1.065rem;
+    padding: .5rem 1rem;
+}
+
+.form__textarea{
+    resize: vertical;
+    max-height: 6rem;
+    min-height: 6rem;
+}
+.form__btn{cursor: pointer;}
+.form__btn{font-size: 1.25rem;}

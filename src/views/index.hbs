@@ -1,0 +1,45 @@
+{{> head }}
+    
+    <main class="main">
+        <button class="btn">
+            <a class="btn__anchor" href="/crear-clientes">Nuevo Cliente</a>
+        </button>
+
+        <section class="table-section">
+            <table class="table">
+                {{#if rows}}
+                    <thead class="table__thead">
+                        <tr class="table__thead-row">
+                            <th class="table__theading">Nombre</th>
+                            <th class="table__theading">Apellido</th>
+                            <th class="table__theading">Cédula</th>
+                            <th class="table__theading">Edad</th>
+                            <th class="table__theading">Dirección</th>
+                            <th class="table__theading">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table__tbody">
+                        {{#each rows}}
+                            <tr class="table__tbody-row">
+                                <td class="table__tdata">{{ this.nombre }}</td>
+                                <td class="table__tdata">{{ this.apellido }}</td>
+                                <td class="table__tdata">{{ this.cedula }}</td>
+                                <td class="table__tdata">{{ this.edad }}</td>
+                                <td class="table__tdata">{{ this.direccion }}</td>
+                                <td class="table__tdata table__data--btn">
+                                    <a class="table__btn table__btn--delete" href="/eliminar?id={{ this.id_cliente }}">
+                                        <img src="/icons/delete.svg" alt="delete">
+                                    </a>
+                                    <a class="table__btn table__btn--edit" href="/editar?id={{ this.id_cliente }}">
+                                        <img src="/icons/edit.svg" alt="edit">
+                                    </a>
+                                </td>
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                {{/if}}
+            </table>
+        </section>
+    </main>
+
+{{> foot }}

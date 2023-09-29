@@ -1,0 +1,10 @@
+DROP TABLE clientes IF NOT EXISTS;
+
+CREATE TABLE clientes(
+    id_cliente INT AUTO_INCREMENT PRIMARY KEY, 
+    nombre VARCHAR(100) NOT NULL, 
+    apellido VARCHAR(100) NOT NULL, 
+    cedula CHAR(11) NOT NULL UNIQUE, 
+    edad SMALLINT NOT NULL CHECK(edad BETWEEN 1 AND 150 ), 
+    direccion VARCHAR(255)
+);
